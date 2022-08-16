@@ -1,3 +1,9 @@
+import {
+  DECREAMENT_COUNTER,
+  INCREAMENT_COUNTER,
+  RESET_COUNTER,
+} from "../constants/counterConstants";
+
 const initialCount = {
   count: 0,
 };
@@ -9,7 +15,7 @@ const counterReducer = (state = initialCount, action) => {
 
     case DECREAMENT_COUNTER:
       let decreamentCount;
-      if (state.count > 0) {
+      if (state.count > 1) {
         decreamentCount = state.count - 1;
       }
       return { ...state, count: decreamentCount };
