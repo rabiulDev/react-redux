@@ -1,5 +1,7 @@
+import Counter from "./components/Counter";
+
 const App = () => {
-  return <h1>Hello React Redux</h1>;
+  return <Counter />;
 };
 
 export default App;
