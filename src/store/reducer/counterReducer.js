@@ -15,9 +15,13 @@ const counterReducer = (state = initialCount, action) => {
 
     case DECREAMENT_COUNTER:
       let decreamentCount;
-      if (state.count > 1) {
+
+      if (state.count > 0) {
         decreamentCount = state.count - 1;
+      } else {
+        decreamentCount = 0;
       }
+
       return { ...state, count: decreamentCount };
 
     case RESET_COUNTER:
